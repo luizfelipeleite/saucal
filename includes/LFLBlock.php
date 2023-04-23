@@ -50,8 +50,8 @@ class LFLBlock {
         
         $output = '<div class="wp-block-lfl-block">';
 
-        foreach($data['data']['headers'] as $header) {
-            $output .= '<p>' . esc_html($header) . '</p>';
+        foreach($data['data']['headers'] as $key => $header) {
+            $output .= '<p>' . esc_html($key) . ': ' .  esc_html($header) . '</p>';
         }
 
         $output .= '</div>';
